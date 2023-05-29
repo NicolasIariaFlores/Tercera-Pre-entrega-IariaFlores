@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block TITULO %}
+    CHOCOLATES
+{% endblock TITULO %}
+
+{% block CONTENIDO %}
+    {% for chocolate in chocolates %}
+        <h2>{{chocolate.marca}}</h2>
+        <h2>{{chocolate.gramaje}}</h2>
+        <h2>{{chocolate.descripcion}}</h2>
+    {% endfor %}
+{% endblock CONTENIDO %}
+
+{% block URLS %}
+    <a href="{% url 'index' %}">Volver a menu principal</a>
+    <a href="{% url 'productos:index' %}"> Volver a PRODUCTOS </a>
+{% endblock URLS %}
