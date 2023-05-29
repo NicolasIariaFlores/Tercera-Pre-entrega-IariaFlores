@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PRODUCTOS</h1>
+
+    {% for bebida in bebidas %}
+        <h2>{{bebida.nombre}}</h2>
+        <h2>{{bebida.tamaño}}</h2>
+        <h2>{{bebida.distribuidor}}</h2>
+    {% endfor %}
+
+    {% for snack in snacks %}
+        <h2>{{snack.tipo}}</h2>
+        <h2>{{snack.marca}}</h2>
+        <h2>{{snack.gramaje}}</h2>
+    {% endfor %}
+
+    {% for chocolate in chocolates %}
+        <h2>{{chocolate.marca}}</h2>
+        <h2>{{chocolate.gramaje}}</h2>
+        <h2>{{chocolate.descripcion}}</h2>
+    {% endfor %}
+
+    <a href="{% url 'index' %}">Volver a menu principal</a>
+</body>
+</html>
