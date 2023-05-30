@@ -5,12 +5,14 @@
 {% endblock TITULO %}
 
 {% block CONTENIDO %}
+    <h1>BEBIDAS</h1>
     {% for bebida in bebidas %}
         <h2>{{bebida.nombre}}</h2>
         <h2>{{bebida.tamaño}}</h2>
         <h2>{{bebida.distribuidor}}</h2>
     {% endfor %}
 
+    <h1>SNACKS</h1>
     {% for snack in snacks %}
         <h2>{{snack.tipo}}</h2>
         <h2>{{snack.marca}}</h2>
@@ -18,7 +20,11 @@
     {% endfor %}
 
     <h1>VER COMO USAR EL TEMPLATE "CHOCOLATE"</h1>
-
+    {% for chocolate in chocolates %}
+        <h2>{{chocolate.marca}}</h2>
+        <h2>{{chocolate.gramaje}}</h2>
+        <h2>{{chocolate.descripcion}}</h2>
+    {% endfor %}
 {% endblock CONTENIDO %}
 
 {% block URLS %}

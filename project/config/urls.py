@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
     path('producto/', include("producto.urls")),
+    #path('chocolate/', views.chocolate),
 ]
